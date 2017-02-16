@@ -11,7 +11,7 @@ npm install -g generator-hy-mean
 ```
 
 Then generate your new project:
-
+Start Developing
 ```bash
 yo hy-mean
 ```
@@ -34,6 +34,11 @@ npm run dev
 ```
 
 >This server will automaticly Concat and minify when changes are introduced to your Front end Code
+
+## Installing new Bower dependencies
+
+All new Bower Javascript dependencies have to be included in gulpfile.js in the libs section
+This process is required for gulp to read those libraries
 
 ### IMPORTANT!
 Adding javascript files outised of the components/pages/assets folders will not be visible to Gulp.
