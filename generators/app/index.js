@@ -10,10 +10,10 @@ module.exports = Generator.extend({
       'Welcome to ' + chalk.red('generator-hy-mean') + ' generator! By Hei Yuki!'
     ));
     var prompts = [{
-      type    : 'input',
-      name    : 'name',
-      message : 'Your project name',
-      default : this.appname // Default to current folder name
+      type: 'input',
+      name: 'name',
+      message: 'Your project name',
+      default: this.appname // Default to current folder name
     }];
 
 
@@ -24,17 +24,23 @@ module.exports = Generator.extend({
   },
 
   writing: function() {
-    this.fs.copy(
+    this.fs.copyTpl(
       this.templatePath(''),
-      this.destinationPath('./'+this.props.name)
+      this.destinationPath('./' + this.props.name), {
+        appname: this.props.name
+      }
     );
-    this.fs.copy(
+    this.fs.copyTpl(
       this.templatePath('./.bowerrc'),
-      this.destinationPath('./'+this.props.name+'/.bowerrc')
+      this.destinationPath('./' + this.props.name + '/.bowerrc'), {
+        appname: this.props.name
+      }
     );
-    this.fs.copy(
+    this.fs.copyTpl(
       this.templatePath('./.gitignore'),
-      this.destinationPath('./'+this.props.name+'/.gitignore')
+      this.destinationPath('./' + this.props.name + '/.gitignore'), {
+        appname: this.props.name
+      }
     );
   },
 
