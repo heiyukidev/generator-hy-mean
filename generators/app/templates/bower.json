@@ -2,6 +2,7 @@
   "name": "<%= appname %>",
   "description": "",
   "main": "",
+  "author": "<%= appauth %>",
   "license": "MIT",
   "homepage": "",
   "dependencies": {

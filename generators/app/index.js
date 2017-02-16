@@ -12,8 +12,13 @@ module.exports = Generator.extend({
     var prompts = [{
       type: 'input',
       name: 'name',
-      message: 'Your project name',
+      message: 'Your Project Name',
       default: this.appname // Default to current folder name
+    },{
+      type: 'input',
+      name: 'auth',
+      message: 'Your Authors Name',
+      default: "Kitty Kat" // Default to current folder name
     }];
 
 
@@ -27,19 +32,22 @@ module.exports = Generator.extend({
     this.fs.copyTpl(
       this.templatePath(''),
       this.destinationPath('./' + this.props.name), {
-        appname: this.props.name
+        appname: this.props.name,
+        appauth: this.props.auth
       }
     );
     this.fs.copyTpl(
       this.templatePath('./.bowerrc'),
       this.destinationPath('./' + this.props.name + '/.bowerrc'), {
-        appname: this.props.name
+        appname: this.props.name,
+        appauth: this.props.auth
       }
     );
     this.fs.copyTpl(
       this.templatePath('./.gitignore'),
       this.destinationPath('./' + this.props.name + '/.gitignore'), {
-        appname: this.props.name
+        appname: this.props.name,
+        appauth: this.props.auth
       }
     );
   },

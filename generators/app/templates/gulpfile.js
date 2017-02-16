@@ -6,12 +6,11 @@ var plumber = require('gulp-plumber');
 
 var destination = './app';
 
-var files = ['app/app.js'];
 
 gulp.task('loadLibs', function() {
   var libs = [
-    "app/libs/angular/angular.js",
-    "app/libs/angular-ui-router/release/angular-ui-router.min.js"
+    "app/lib/angular/angular.js",
+    "app/lib/angular-ui-router/release/angular-ui-router.min.js"
   ];
   return gulp.src(libs)
     .pipe(plumber())
@@ -21,18 +20,16 @@ gulp.task('loadLibs', function() {
 
 gulp.task('build', function() {
 
-  return gulp.src(['./src/components/**/*.module.js',
-      './src/components/**/*.service.js',
-      './src/components/**/*.controller.js',
-      './src/components/**/*.directive.js',
-      './src/pages/**/*.module.js',
-      './src/pages/**/*.service.js',
-      './src/pages/**/*.controller.js',
-      './src/pages/**/*.directive.js',
-      './src/**/*.module.js',
-      './src/**/*.service.js',
-      './src/**/*.controller.js',
-      './src/**/*.directive.js'
+  return gulp.src(['./app/components/**/*.module.js',
+      './app/components/**/*.service.js',
+      './app/components/**/*.controller.js',
+      './app/components/**/*.directive.js',
+      './app/pages/**/*.module.js',
+      './app/pages/**/*.service.js',
+      './app/pages/**/*.controller.js',
+      './app/pages/**/*.directive.js',
+      './app/assets/**/*.js',
+      'app/app.js'
     ])
     .pipe(plumber())
     .pipe(concat("script.min.js"))
@@ -40,7 +37,7 @@ gulp.task('build', function() {
     .pipe(gulp.dest(destination));
 });
 gulp.task('watch', function() {
-  gulp.watch('app/**/*.js', ['build'])
+  gulp.watch('app/**/*.js', ['build', 'loadLibs'])
 });
 
 gulp.task('default', ['loadLibs', 'build', 'watch']);

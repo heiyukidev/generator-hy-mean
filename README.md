@@ -35,6 +35,11 @@ npm run dev
 
 >This server will automaticly Concat and minify when changes are introduced to your Front end Code
 
+### IMPORTANT!
+Adding javascript files outised of the components/pages/assets folders will not be visible to Gulp.
+Any file outside of javascript (like CSS) will have to be added in manually into index.html
+
+>reason is I don't write my own css so it's not in my build system
 
 ## Run your Application
 
@@ -54,7 +59,7 @@ npm start
 
 ## License
 
-MIT © [heiyukidev]()
+MIT © [heiyukidev](http://github.com/heiyukidev)
 
 
 [npm-image]: https://badge.fury.io/js/generator-hy-mean.svg
