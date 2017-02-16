@@ -21,19 +21,18 @@ gulp.task('loadLibs', function() {
 
 gulp.task('build', function() {
 
-  return gulp.src(['./app/components/**/*.module.js',
-      './app/components/**/*.service.js',
-      './app/components/**/*.controller.js',
-      './app/components/**/*.directive.js',
-      './app/pages/**/*.module.js',
-      './app/pages/**/*.service.js',
-      './app/pages/**/*.controller.js',
-      './app/pages/**/*.directive.js',
-      './app/**/*.module.js',
-      './app/**/*.service.js',
-      './app/**/*.controller.js',
-      './app/**/*.directive.js'
-
+  return gulp.src(['./src/components/**/*.module.js',
+      './src/components/**/*.service.js',
+      './src/components/**/*.controller.js',
+      './src/components/**/*.directive.js',
+      './src/pages/**/*.module.js',
+      './src/pages/**/*.service.js',
+      './src/pages/**/*.controller.js',
+      './src/pages/**/*.directive.js',
+      './src/**/*.module.js',
+      './src/**/*.service.js',
+      './src/**/*.controller.js',
+      './src/**/*.directive.js'
     ])
     .pipe(plumber())
     .pipe(concat("script.min.js"))

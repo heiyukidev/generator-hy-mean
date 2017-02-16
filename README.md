@@ -15,6 +15,35 @@ Then generate your new project:
 ```bash
 yo hy-mean
 ```
+## Start Developing
+
+To Start Developing on the generated project move to it's directory:
+```bash
+cd <your-project-name>
+```
+
+Open a Terminal, One terminal that will act as your app's server (Express.js server):
+```bash
+npm run dev-server
+```
+>This server will automaticly restart when changes are introduced
+
+then open second Terminal, One terminal that will act as your app's server (Express.js server):
+```bash
+npm run dev
+```
+
+>This server will automaticly Concat and minify when changes are introduced to your Front end Code
+
+
+## Run your Application
+
+To run your Application you simply Use:
+```bash
+npm start
+```
+
+
 
 ## Getting To Know Yeoman
 
