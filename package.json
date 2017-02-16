@@ -1,0 +1,61 @@
+{
+  "name": "generator-hy-mean",
+  "version": "1.0.0",
+  "description": "Generate a Minimalistic MeanStack App",
+  "author": {
+    "name": "Hei Yuki",
+    "email": "heiyukidev@gmail.com",
+    "url": "https://github.com/heiyukidev"
+  },
+  "files": [
+    "app"
+  ],
+  "keywords": [
+    "yeoman-generator",
+    "yeoman",
+    "generator",
+    "inception",
+    "init",
+    "create",
+    "boilerplate",
+    "heiyuki",
+    "heiyukidev",
+    "meanstack",
+    "mean"
+  ],
+  "repository": "https://github.com/heiyukidev/generator-hy-mean",
+  "scripts": {
+    "test": "gulp",
+    "prepublish": "gulp prepublish"
+  },
+  "engines": {
+    "node": ">=4.0.0"
+  },
+  "dependencies": {
+    "chalk": "^1.1.3",
+    "deep-extend": "^0.4.1",
+    "generator-node": "^1.12.1",
+    "inquirer-npm-name": "^2.0.0",
+    "lodash": "^4.17.2",
+    "mkdirp": "^0.5.1",
+    "superb": "^1.3.0",
+    "yeoman-generator": "^1.0.0",
+    "yosay": "^2.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^3.15.0",
+    "gulp": "^3.9.1",
+    "gulp-coveralls": "^0.1.4",
+    "gulp-eslint": "^3.0.1",
+    "gulp-exclude-gitignore": "^1.1.1",
+    "gulp-istanbul": "^1.1.1",
+    "gulp-mocha": "^3.0.1",
+    "gulp-nsp": "^2.4.2",
+    "gulp-plumber": "^1.1.0",
+    "mocha": "^3.2.0",
+    "mockery": "^2.0.0",
+    "yeoman-assert": "^2.2.1",
+    "yeoman-test": "^1.6.0"
+  },
+  "license": "MIT"
+}
