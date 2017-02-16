@@ -28,7 +28,7 @@ npm run dev-server
 ```
 >This server will automaticly restart when changes are introduced
 
-then open second Terminal, One terminal that will act as your app's server (Express.js server):
+then open second Terminal, One terminal that will act as your File Watcher (Using Gulp):
 ```bash
 npm run dev
 ```
